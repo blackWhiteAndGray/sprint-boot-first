@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,7 +31,8 @@ public class SprintBootFirstApplication extends SpringBootServletInitializer {
 	@RequestMapping("/")
 	@ResponseBody
 	String home() {
-		return "hello world!";
+		LocalDate now = LocalDate.now();
+		return "hello world!" + now;
 	}
 
 	@RequestMapping("/index")
